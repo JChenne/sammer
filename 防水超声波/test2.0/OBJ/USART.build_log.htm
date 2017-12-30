@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a dell, a, LIC=P6F56-DXT9R-C2GL6-DAIFC-39TMK-EBGBI
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.14.0.0
+Toolchain Path:  F:\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DARMSTM.DLL V1.65.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TARMSTM.DLL V1.64.0.0
+ 
+<h2>Project:</h2>
+F:\大创\防水超声波\test2.0\USER\USART.uvprojx
+Project File Date:  04/03/2017
+
+<h2>Output:</h2>
+Build target 'USART'
+compiling jsn_sr04t.c...
+..\HARDWARE\JSN-SR04T\jsn_sr04t.c(110): warning:  #223-D: function "PBout" declared implicitly
+          PBout(5) = 1;      //发送口高电平输出  
+..\HARDWARE\JSN-SR04T\jsn_sr04t.c(110): error:  #137: expression must be a modifiable lvalue
+          PBout(5) = 1;      //发送口高电平输出  
+..\HARDWARE\JSN-SR04T\jsn_sr04t.c(112): error:  #137: expression must be a modifiable lvalue
+          PBout(5) = 0;  
+..\HARDWARE\JSN-SR04T\jsn_sr04t.c(113): warning:  #223-D: function "PBin" declared implicitly
+          while(ECHO_Reci == 0);      //等待接收口高电平输出  
+..\HARDWARE\JSN-SR04T\jsn_sr04t.c: 2 warnings, 2 errors
+"..\OBJ\USART.axf" - 2 Error(s), 2 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  F:\大创\防水超声波\test2.0\USER\RTE
+  F:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+</pre>
+</body>
+</html>

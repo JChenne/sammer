@@ -1,0 +1,14 @@
+..\output\systick.o: src\SysTick.c
+..\output\systick.o: .\inc\SysTick.h
+..\output\systick.o: ..\CMSIS\stm32f10x.h
+..\output\systick.o: ..\CMSIS\core_cm3.h
+..\output\systick.o: F:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\systick.o: ..\CMSIS\system_stm32f10x.h
+..\output\systick.o: .\inc\stm32f10x_conf.h
+..\output\systick.o: ..\FWlib\inc\stm32f10x_exti.h
+..\output\systick.o: ..\CMSIS\stm32f10x.h
+..\output\systick.o: ..\FWlib\inc\stm32f10x_gpio.h
+..\output\systick.o: ..\FWlib\inc\stm32f10x_rcc.h
+..\output\systick.o: ..\FWlib\inc\stm32f10x_tim.h
+..\output\systick.o: ..\FWlib\inc\stm32f10x_usart.h
+..\output\systick.o: ..\FWlib\inc\misc.h

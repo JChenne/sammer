@@ -1,0 +1,14 @@
+..\output\sonic.o: src\Sonic.c
+..\output\sonic.o: .\inc\Sonic.h
+..\output\sonic.o: ..\CMSIS\stm32f10x.h
+..\output\sonic.o: ..\CMSIS\core_cm3.h
+..\output\sonic.o: F:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\sonic.o: ..\CMSIS\system_stm32f10x.h
+..\output\sonic.o: .\inc\stm32f10x_conf.h
+..\output\sonic.o: ..\FWlib\inc\stm32f10x_exti.h
+..\output\sonic.o: ..\CMSIS\stm32f10x.h
+..\output\sonic.o: ..\FWlib\inc\stm32f10x_gpio.h
+..\output\sonic.o: ..\FWlib\inc\stm32f10x_rcc.h
+..\output\sonic.o: ..\FWlib\inc\stm32f10x_tim.h
+..\output\sonic.o: ..\FWlib\inc\stm32f10x_usart.h
+..\output\sonic.o: ..\FWlib\inc\misc.h
