@@ -1,0 +1,251 @@
+;------------------------------------------------------------------
+; 
+;   EasyCAP.inf-- This file contains installation information
+;                
+;
+;
+;   This installation is for Windows XP/Vista/7 
+;               
+; Copyright (C) 2000-2011  Computer Co., Ltd. 
+; All rights reserved.
+;
+;------------------------------------------------------------------
+
+[Version]
+signature="$CHICAGO$"
+Class=Media
+ClassGUID={4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider=%ProviderName%
+DriverVer=06/08/2011,	2.1.1.2
+CatalogFile=OEMDrv.cat
+
+[Manufacturer]
+%ProviderName% = X86BDA, NTamd64
+
+[DestinationDirs]
+X86BDA.CopyDrivers = 12
+
+[SourceDisksNames]
+1=%X86BDA.Disk1%,,,
+
+[SourceDisksFiles]
+OEMDrv.sys=1
+
+[X86BDA.CopyDrivers]
+OEMDrv.sys
+
+
+[X86BDA]
+%X86BDA.DeviceDesc%=BDA.Device, USB\VID_1B71&PID_3002
+
+
+[X86BDA.NTamd64]
+%X86BDA.DeviceDesc%=BDA.Device, USB\VID_1B71&PID_3002
+
+
+;----------------------------begin----------------------------------
+[BDA.Device.NT]
+Include=    ks.inf,kscaptur.inf,BDA.inf,wdmaudio.inf
+Needs=      Stream.Registration,KS.Registration,KSCAPTUR.Registration.NT,BDA.Installation.NT,WDMAUDIO.Registration.NT
+DelReg=	    OEM.DelReg
+AddReg=     X86BDA.AddReg,OEM.AddReg
+CopyFiles=  X86BDA.CopyDrivers
+
+[BDA.Device.NTamd64]
+Include=    ks.inf,kscaptur.inf,BDA.inf,wdmaudio.inf
+Needs=      Stream.Registration,KS.Registration,KSCAPTUR.Registration.NT,BDA.Installation.NT,WDMAUDIO.Registration.NT
+DelReg=	    OEM.DelReg
+AddReg=     X86BDA.AddReg,OEM.AddReg
+CopyFiles=  X86BDA.CopyDrivers
+
+[X86BDA.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,OEMDrv.sys
+HKR,,PageOutWhenUnopened,3,01
+HKR,,DontSuspendIfStreamsAreRunning,3,01
+;----------------------------end------------------------------------
+
+
+;---------------------------------------------------------------
+;                O E M
+;---------------------------------------------------------------
+
+[OEM.DelReg]
+
+HKR,Settings\PropDefaults
+HKR,Settings\ProductDefaults
+HKR,Settings\DecoderDefaults
+
+
+[OEM.AddReg]
+HKR,Settings\ATVSettings,AnalogTvTunerType,	0x00000001,		0x00
+HKR,Settings\ATVSettings,AnalogTvTunerAddress,	0x00010001,		0xc0
+HKR,Settings\ATVSettings,AnalogTvTunerIf,	0x00010001,		38000
+HKR,Settings\ATVSettings,GlobalControlWord,	0x00010001,		0xCE
+HKR,Settings\ATVSettings,HBandControlWord,	0x00010001,		0x02
+HKR,Settings\ATVSettings,LBandControlWord,	0x00010001,		0x01
+HKR,Settings\ATVSettings,LBandFrequencyDivid,	0x00010001,		160250
+HKR,Settings\ATVSettings,MaxFrequency,		0x00010001,		863250
+HKR,Settings\ATVSettings,MinFrequency,		0x00010001,		49750
+HKR,Settings\ATVSettings,UBandControlWord,	0x00010001,		0x08
+HKR,Settings\ATVSettings,UBandFrequencyDivid,	0x00010001,		464250
+
+HKR,Settings\DTVSettings,DTV1Type,		0x00000001,		0x22
+HKR,Settings\DTVSettings,DTV1NimType,		0x00000001,		0x00
+HKR,Settings\DTVSettings,DTV2Type,		0x00000001,		0x11
+HKR,Settings\DTVSettings,DTV2NimType,		0x00000001,		0x04
+HKR,Settings\DTVSettings,NimCombination,	0x00000001,		0x00
+
+HKR,Settings\PropDefaults,AVPalProp,		0x00000001,		0x40,0x00,0x00,0x02,0x80,0x12,0x90,0x00
+HKR,Settings\PropDefaults,AVNtscProp,		0x00000001,		0x60,0x92,0x00,0x02,0x00,0x11,0xC0,0xD0
+HKR,Settings\PropDefaults,AVSecamProp,		0x00000001,		0x20,0x00,0x00,0x02,0x00,0x12,0xA0,0x08
+HKR,Settings\PropDefaults,BrightnessRange,	0x00000001,		0x00,0x00,0xFF,0x03
+HKR,Settings\PropDefaults,ContrastRange,	0x00000001,		0x00,0x00,0xFF,0x03
+HKR,Settings\PropDefaults,HueRange,		0x00000001,		0xFF,0x0F,0xFF,0x0F
+HKR,Settings\PropDefaults,SaturationRange,	0x00000001,		0x00,0x00,0xFF,0x03
+HKR,settings\PropDefaults,ShapnessRange,	0x00000001,		0x00,0xFF
+
+HKR,Settings\ProductDefaults,SourceInput, 		0x00000001,		0x01
+HKR,Settings\ProductDefaults,AudioDefaultOuput,		0x00000001,		0x30
+HKR,Settings\ProductDefaults,MaskLeftRightMargin,	0x00000001,		0x02
+HKR,Settings\ProductDefaults,MaskTopBottomMargin,	0x00000001,		0x02
+
+HKR,Settings\DecoderDefaults,AVPAL,			0x00000001,		0x04,0x68,0xD3,0x72,0xA2,0xB0,0x15,0x01,0x2C,0x10,0x20,0x2e,0x08,0x02,0x02,0x59,0x16,0x35,0x17,0x16,0x36
+HKR,Settings\DecoderDefaults,AVNTSC,			0x00000001,		0x04,0x79,0xD3,0x68,0x9c,0xf0,0x15,0x00,0xfc,0x04,0x08,0x2e,0x08,0x02,0x01,0x5f,0x12,0x01,0x1c,0x11,0x05
+HKR,Settings\DecoderDefaults,AVSECAM,			0x00000001,		0x04,0x73,0xDC,0x72,0xA2,0x90,0x35,0x01,0x30,0x04,0x08,0x2D,0x28,0x08,0x02,0x69,0x16,0x35,0x21,0x16,0x36
+HKR,Settings\DecoderDefaults,TVPAL,			0x00000001,		0x04,0x68,0xD3,0x72,0xA2,0xB0,0x15,0x01,0x2C,0x10,0x20,0x2C,0x08,0x02,0x02,0x59,0x16,0x35,0x17,0x16,0x36
+
+
+
+;----------------------------begin----------------------------------
+[BDA.Device.NTamd64.Interfaces]
+AddInterface = %KSCATEGORY_CAPTURE%,	%GUID_STREAMCAPTURE%,	VideoCapture,0
+AddInterface = %KSCATEGORY_VIDEO%,	%GUID_STREAMCAPTURE%,	VideoCapture,0
+AddInterface = %KSCATEGORY_AUDIO%,	%GUID_STREAMCAPTURE%,	VideoCapture,0
+AddInterface = %KSCATEGORY_CROSSBAR%,	%GUID_XBAR%,		VideoCrossbar,0
+AddInterface = %KSCATEGORY_TVAUDIO%,	%GUID_TVAUDIO%,		VideoTvAudio,0
+AddInterface = %KSCATEGORY_TVTUNER%,	%GUID_ANALOGVIDEODECODER%,VideoTvTuner,0
+AddInterface = %KSCATEGORY_DEVICE_CTRL%,		%GUID_DEVICE_CONTROL_Filter%,	DeviceControlInterfaces, 0
+
+
+[BDA.Device.NT.Interfaces]
+AddInterface = %KSCATEGORY_CAPTURE%,	%GUID_STREAMCAPTURE%,	VideoCapture,0
+AddInterface = %KSCATEGORY_VIDEO%,	%GUID_STREAMCAPTURE%,	VideoCapture,0
+AddInterface = %KSCATEGORY_AUDIO%,	%GUID_STREAMCAPTURE%,	VideoCapture,0
+AddInterface = %KSCATEGORY_CROSSBAR%,	%GUID_XBAR%,		VideoCrossbar,0
+AddInterface = %KSCATEGORY_TVAUDIO%,	%GUID_TVAUDIO%,		VideoTvAudio,0
+AddInterface = %KSCATEGORY_TVTUNER%,	%GUID_ANALOGVIDEODECODER%,	VideoTvTuner,0
+AddInterface = %KSCATEGORY_DEVICE_CTRL%,		%GUID_DEVICE_CONTROL_Filter%,	DeviceControlInterfaces,0
+
+
+;----------------------------end----------------------------------
+
+
+
+[VideoCapture]
+AddReg=VideoCapture.AddReg , PinNames.AddReg
+
+[VideoTvTuner]
+AddReg=VideoTvTuner.AddReg
+
+[VideoCrossbar]
+AddReg=VideoXBar.AddReg
+
+[VideoTvAudio]
+AddReg=VideoTvAudio.AddReg
+
+[DeviceControlInterfaces]
+AddReg=DeviceControlInterfaces.AddReg
+
+
+
+[VideoCapture.AddReg]
+HKR,,CLSID,,%KSProxy.CLSID%
+HKR,,FriendlyName,,%X86BDA.Capture%
+
+[VideoTvTuner.AddReg]
+HKR,,CLSID,,%KSTvTune.CLSID%
+HKR,,FriendlyName,,%X86BDA.TvTuner%
+    
+[VideoXBar.AddReg]
+HKR,,CLSID,,%KSXBar.CLSID%
+HKR,,FriendlyName,,%X86BDA.Crossbar%
+
+[VideoTvAudio.AddReg]
+HKR,,CLSID,,%KSTVAudio.CLSID%
+HKR,,FriendlyName,,%X86BDA.TvAudio%
+
+[DeviceControlInterfaces.AddReg]
+HKR,,CLSID,,%KSProxy.CLSID%
+HKR,,FriendlyName,,%X86BDA.DeviceControl.FriendlyName%
+
+[PinNames.AddReg]
+HKLM,%MediaCategories%\%GUID.PINNAME_AnalogAudioIn%,Name,,%Pin.AnalogAudioIn%
+HKLM,%MediaCategories%\%GUID.PINNAME_AudioOut%,Name,,%Pin.AudioOut%
+
+;----------------------------begin----------------------------------
+[BDA.Device.NT.Services]
+AddService = X86BDA,0x00000002,X86BDA.ServiceInstall
+
+[BDA.Device.NTamd64.Services]
+AddService = X86BDA,0x00000002,X86BDA.ServiceInstall
+;----------------------------begin----------------------------------
+
+[X86BDA.ServiceInstall]
+DisplayName   = %X86BDA.ServiceName%
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %12%\OEMDrv.sys
+
+;---------------------------------------------------------------
+;                S t r i n g s
+;---------------------------------------------------------------
+
+[Strings]
+KSProxy.CLSID=                     "{17CCA71B-ECD7-11D0-B908-00A0C9223196}"
+KSXBar.CLSID=                      "{71F96460-78F3-11d0-A18C-00A0C9118956}"
+KSTVAudio.CLSID=                   "{71F96462-78F3-11d0-A18C-00A0C9118956}"
+KSTvTune.CLSID=                    "{266EEE40-6C63-11cf-8A03-00AA006ECB65}"
+KSCATEGORY_CAPTURE=                "{65E8773D-8F56-11D0-A3B9-00A0C9223196}"
+KSCATEGORY_VIDEO=                  "{6994AD05-93EF-11D0-A3CC-00A0C9223196}"
+KSCATEGORY_AUDIO=                  "{6994AD04-93EF-11D0-A3CC-00A0C9223196}"
+KSCATEGORY_CROSSBAR=               "{a799a801-a46d-11d0-a18c-00a02401dcd4}"
+KSCATEGORY_TVAUDIO=                "{a799a802-a46d-11d0-a18c-00a02401dcd4}"
+KSCATEGORY_TVTUNER=                "{a799a800-a46d-11d0-a18c-00a02401dcd4}"
+KSCATEGORY_DEVICE_CTRL		=  "{CC7BFB46-F175-11d1-A392-00E0291F3959}"
+
+
+GUID_STREAMCAPTURE=		"{13FC27E1-C28A-4270-BBC8-2DF754FC74F2}"
+GUID_ANALOGVIDEODECODER=	"{05352B3A-ADA0-42fe-A127-12F7F6E52A3C}"
+GUID_TVAUDIO=			"{430C3E41-1B20-4fd1-8F05-E9C1305B496D}"
+GUID_XBAR=			"{534D26A1-F563-4d44-A5E4-82D0671F6B6D}"
+
+GUID_DEVICE_CONTROL_Filter 	= 	"{A139D962-F213-49e3-8E64-93C60D892597}"
+
+
+MediaCategories="SYSTEM\CurrentControlSet\Control\MediaCategories"
+
+GUID.PINNAME_AnalogAudioIn="{611471C4-68CF-48bb-AD6A-5189101A08FB}"
+GUID.PINNAME_AudioOut="{21EBB6E1-7062-4c60-9366-6AEF935BA738}"
+;----------------
+; Localizable
+;----------------
+
+ProviderName=       "OEM"
+
+X86BDA.Disk1=     	"Install Disk"
+X86BDA.ServiceName = "OEM Capture"
+X86BDA.DeviceDesc= "OEM Capture"
+X86BDA.Capture   = "OEM Device"
+X86BDA.TvTuner   = "OEM Analog TvTuner"
+X86BDA.Crossbar  = "OEM Crossbar"
+X86BDA.TvAudio   = "OEM Analog TvAudio"
+
+
+
+Pin.AnalogVideoIn="Analog Video In"
+Pin.AnalogAudioIn="Analog Audio In"
+Pin.VideoOut="VideoOut"
+Pin.AudioOut="AudioOut"
+X86BDA.DeviceControl.FriendlyName = "OEM Device Control Filter"

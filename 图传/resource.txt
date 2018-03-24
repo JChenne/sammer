@@ -1,0 +1,812 @@
+/// honestechTVDlg.cpp ///	// updated 20070801
+MAIN_TITEL (honestech TVR 2.5) 		
+    
+MAIN_MESSAGE001 (功能设定)
+MAIN_MESSAGE002 (期限版的录制时间为10钟.请使用正式版)
+MAIN_MESSAGE003 (边看边录失败)
+MAIN_MESSAGE004 (文件播放失败)     
+MAIN_MESSAGE005 (升级版可边看边录超过10分钟)   
+MAIN_MESSAGE006 (确认要删除此文件吗)
+MAIN_MESSAGE007 (InitDriverFast 失败)
+MAIN_MESSAGE008 (请安装Windows Media Player)  
+MAIN_MESSAGE009 (不能编辑这个AVI 或 BMP 文件)    
+MAIN_MESSAGE010 (此版本不支持对MPEG-2格式的编辑功能)
+MAIN_MESSAGE012 (硬盘空间巳满)
+MAIN_MESSAGE013 (这个文件不存在)
+MAIN_MESSAGE014 (此文件不能在FM模式下运行, 请选择其他模式.)	
+MAIN_MESSAGE015 (请选择FM模式, 播放此文件.)				
+MAIN_MESSAGE016 (这个版本不支持,此文件格式..)			
+MAIN_MESSAGE017 (不能播放文件, 请先停止当前的文件.)				
+MAIN_MESSAGE018 (时间平移-Time-shifting 不能在FM模式下运行.)	
+MAIN_MESSAGE019 (可用空间不足,请确认您的磁盘空间.)	 
+MAIN_MESSAGE020 (为了应用更改的设置,请重新启动TVR.)	
+MAIN_MESSAGE021 (请先进行自动搜索功能.)	
+
+ 
+MAIN_TOOLTIP001 (http://www.honestech.com)
+MAIN_TOOLTIP002 (录像)
+MAIN_TOOLTIP003 (录像停止)
+MAIN_TOOLTIP004 (边看边录)
+MAIN_TOOLTIP005 (暂停)
+MAIN_TOOLTIP006 (停止)
+MAIN_TOOLTIP007 (开始)
+MAIN_TOOLTIP008 (结束)
+MAIN_TOOLTIP009 (最小化)
+MAIN_TOOLTIP010 (退出)
+MAIN_TOOLTIP011 (帮助)
+MAIN_TOOLTIP012 (频道向上)
+MAIN_TOOLTIP013 (频道向下)
+MAIN_TOOLTIP014 (预约录像)
+MAIN_TOOLTIP015 (功能设定)
+MAIN_TOOLTIP016 (自动搜索)
+MAIN_TOOLTIP017 (改变控制面板颜色)
+MAIN_TOOLTIP018 (音量大)
+MAIN_TOOLTIP019 (音量小)
+MAIN_TOOLTIP020 (静音)
+MAIN_TOOLTIP021 (播放)
+MAIN_TOOLTIP022 (编辑)
+MAIN_TOOLTIP023 (寄送出去)
+MAIN_TOOLTIP024 (显示列表)
+MAIN_TOOLTIP025 (影像目录)
+MAIN_TOOLTIP026 (新增目前的频道到频道清单)
+MAIN_TOOLTIP027 (删除目前在频道清单中的频道)
+MAIN_TOOLTIP028 (回放)
+MAIN_TOOLTIP029 (捕捉画面)
+MAIN_TOOLTIP030 (自动预览频道)
+MAIN_TOOLTIP031 (声道控制)
+MAIN_TOOLTIP032 (iEPG)
+MAIN_TOOLTIP033 (Teletext)		
+MAIN_TOOLTIP034 (频道列表)	
+MAIN_TOOLTIP035 (打开EPG窗口)		// 20071123
+MAIN_TOOLTIP036 (显示字幕)		// 20071123
+MAIN_TOOLTIP037 (关闭字幕)		// 20071123
+   
+MAIN_LIST001  (文件)
+MAIN_LIST002  (大小)
+MAIN_LIST003  (时间)     
+MAIN_LIST004  (全名)
+
+DRIVER_LIST001 (硬盘)
+DRIVER_LIST002 (全部容量)
+DRIVER_LIST003 (可用容量)
+DRIVER_LIST004 (硬盘文件系统)
+
+SCREEN_TITEL      (TVR 屏幕)
+SCREEN_MESSAGE001 (录像失败)
+SCREEN_MESSAGE002 (初始化采集装置失败)
+SCREEN_MESSAGE003 (初始化 Overlay 失败)
+SCREEN_MESSAGE004 (在目前的路径中找不到 Player.exe)
+SCREEN_MESSAGE005 (要新增频道吗)
+SCREEN_MESSAGE006 (录制AVI格式的影像文件失败)   
+SCREEN_MESSAGE007 (目前所使用的采集装置不支持你所指定的录像格式)
+SCREEN_MESSAGE008 (搜索频道结束)
+SCREEN_MESSAGE009 (频道列表中已注册的信息将被删除,是否继续 ?) // 200509 added
+
+SCREEN_TOOLTIP001 (最小化)    
+SCREEN_TOOLTIP002 (全屏幕)
+SCREEN_TOOLTIP003 (退出)   		// added
+///////////////////////////
+
+
+/// setting.cpp ///
+OPTION_MESSAGE001  (对不起.升级版才可边看边录超过10分钟.)
+///////////////////
+
+
+/// MediaDlg.cpp ///
+EDIT_TOOLTIP001  (退出)
+EDIT_TOOLTIP002  (左边删除)
+EDIT_TOOLTIP003  (右边删除)
+EDIT_TOOLTIP004  (上一个)
+EDIT_TOOLTIP005  (下一个)
+EDIT_TOOLTIP006  (清除)
+EDIT_TOOLTIP007  (播放)
+EDIT_TOOLTIP008  (暂停)
+EDIT_TOOLTIP009  (停止)
+EDIT_TOOLTIP010  (编辑)
+
+EDIT_MESSAGE001  (打开文件失败)
+EDIT_MESSAGE002  (编辑失败)
+EDIT_MESSAGE003  (请选择起始及结束点)
+EDIT_MESSAGE004  (升级版才能编辑超过十分钟的影像)
+///////////////////////
+
+
+/// ScheduleDlg.cpp TimeDlg.cpp ///
+SCHEDULE_LIST001	(天)
+SCHEDULE_LIST002	(开始)
+SCHEDULE_LIST003	(持续)
+SCHEDULE_LIST004	(来源)
+SCHEDULE_LIST005	(频道)
+SCHEDULE_LIST006	(每天)
+SCHEDULE_LIST007	(模式)
+SCHEDULE_LIST008	(预约录像后)
+
+SCHEDULE_SOURCE001   (TV)
+SCHEDULE_SOURCE002   (Cable)
+SCHEDULE_SOURCE003   (Composite)
+SCHEDULE_SOURCE004   (S-Video)
+
+SCHEDULE_WEEK001   (星期日)
+SCHEDULE_WEEK002   (星期一)
+SCHEDULE_WEEK003   (星期二)
+SCHEDULE_WEEK004   (星期三)
+SCHEDULE_WEEK005   (星期四)
+SCHEDULE_WEEK006   (星期五)
+SCHEDULE_WEEK007   (星期六)
+SCHEDULE_WEEK008   (天)
+SCHEDULE_WEEK009   (一次)
+
+SCHEDULE_VIEW001   (录像)
+SCHEDULE_VIEW002   (观看)
+
+SCHEDULE_MESSAGE001   (在同一个时间段已有节目被选择)
+SCHEDULE_MESSAGE002   (没有节目信息,请输入节目信息)
+///////////////////////
+
+SCHEDULE_AfterRec001(待命中)
+SCHEDULE_AfterRec002(关闭TVR)
+SCHEDULE_AfterRec003(进入待机模式)
+SCHEDULE_AfterRec004(关闭PC)
+SCHEDULE_AddNotice001(请注意! 当您的PC关闭后, 预约录像将无法工作)
+SCHEDULE_AddNotice002(十分钟内将进行预约录像, 取消待机模式 正在设定预约录像后的工作程序)
+
+MAIN_MSGCODEC1(selected video codec could not used in this application)
+MAIN_MSGCODEC2(selected Audio codec could not used in this application)
+
+
+///// Menu resource /////
+MENU_PLAY(播放)
+MENU_EDIT(编辑)
+MENU_MAIL(发送邮件)
+MENU_RENAME(重名)						// 20051213 Add
+MENU_DELETE(删除)
+MENU_SAVEAS(保存为)
+
+MENU_SCREEN(显示模式)
+MENU_FREESCALE(自由比例)		// 20071123
+MENU_DEINTERLACE(交错)			// 20071123
+MENU_SKINCHANGE(更改界面)		// 20071123
+MENU_SKINBASIC(基本模式)		// 20071123
+MENU_SKINREMOCON(摇控器模式)		// 20071123
+
+MENU_FULL(全屏幕)
+MENU_NORMAL(正常比例)
+MENU_MINIMIZE(最小化)
+MENU_ASPECTRATIO(画面比例)
+MENU_ALWAYSTOP(控制面板显示在顶层)
+MENU_CHANNELUP(频道向上) 		//  added
+MENU_CHANNELDOWN(频道向下) 		//  added
+MENU_AUTOSCAN(搜索频道) 		//  added
+MENU_CHANNELSURFING(自动预览频道) 	//  added
+MENU_PROPERTYSETTING(功能设定)	 	//  added
+MENU_SCHEDULEREC(预录设定) 		//  added
+MENU_MUTE(静音) 			//  added
+MENU_SHOWPANEL(控制面板)	 	//  added
+MENU_CLOSEMENU(关闭菜单) 		//  added
+MENU_SHUTDOWN(退出) 			// added use text from TRAY_EXIT 
+
+TRAY_SCHEDULE(预录观看)
+TRAY_LAUNCH(启动 - TVR)
+TRAY_EXIT(退出)
+
+///// Change Name Page ///////
+CN_CHANGENAME_TITLE(重名对话框)					// 20051213 Add
+CN_ORIGINAL_NAME   (源文件名 :)					// 20051213 Add
+CN_TARGET_NAME     (更名为 :)					// 20051213 Add
+
+///// TV preoperty page. /////
+TV_TITLE(TV 设定)
+TV_CATEGORY(类型)
+TV_TV(TV)
+TV_CATV(CATV)
+TV_COUNTRY(国家)
+TV_AUTODETECT(自动识别国家 :)
+TV_SELECT(手动选择国家 :)
+TV_CODE(国家代码 :)
+TV_ADELETE(增加/删除 频道)
+TV_MIN(最小化 :)
+TV_MAX(最大化 :)
+TV_ENTER(确认)
+TV_ADD(增加 ->)
+TV_DEL(<- 删除)
+TV_SCAN(自动搜索)
+
+TV_CHANGENAME(改变名称)
+TV_FINETUNE(微调)
+TV_RESET(重置)
+TV_SMODE(搜索方式)
+TV_CHANNEL(频道号)
+TV_CHNAMES(频道名称)
+TV_CHTVSYSTEM(视频标准)
+TV_SCANMODE1(频道搜索)
+TV_SCANMODE2(频率搜索)
+
+TV_SORTMODE(排列方式 :)
+TV_SORTMODE1(依频道顺序 - 递增排列)
+TV_SORTMODE2(依频道顺序 - 递减排列)
+TV_SORTMODE3(依频道名称 - 递增排列)
+TV_SORTMODE4(依频道名称 - 递减排列)
+
+TV_TABLEMODE1(按频道号选台)
+TV_TABLEMODE2(按频道顺序选台)
+
+TV_OPMODE(选择指定频道模式 :)
+TV_FAVORITECHANNEL(只显示已被选择的频道)
+TV_CHANGEORDER(改变频道顺序 :)
+TV_CHANGEUP(上移)
+TV_CHANGEDOWN(下移)
+TV_CHANGEMOVETO(移动)
+TV_CHORDER(频道顺序)
+
+TV_MESSAGE001 (请在复选框中选择喜爱的频道!) 	// 200509 added
+TV_MESSAGE002 (请选择范围.) 			// 200509 added
+
+///// VIDEO preoperty page. /////
+VIDEO_TITLE(视频设定)
+VIDEO_FINE(微调)
+VIDEO_DEFAULT(默认值)
+VIDEO_BR(亮度)
+VIDEO_CON(对比)
+VIDEO_HUE(色度)
+VIDEO_SAT(饱和度)
+VIDEO_VIDEOSTANDARD(影音标准)
+VIDEO_VCAP(采集装置)
+VIDEO_VSOURCE(视频来源)
+VIDEO_ACAP(混音装置)
+VIDEO_ASOURCE(音频输入)
+VIDEO_APLAYSOURCE(播放装置 :)			// 200509 added
+VIDEO_ARECSOURCE(录音装置 :)			// 200509 added
+VIDEO_PLAY(播放 :)
+VIDEO_REC(录像 :)
+VIDEO_INTERNALAUDIO(使用内置音源)		// 200509 added
+
+///// REC preoperty page. /////
+REC_TITLE(录像设定)
+REC_RECTYPE(录像型式)
+REC_AV(影像+声音)
+REC_ONLYVIDEO(只有影像)
+REC_PROFILE(录像模板)
+REC_SIZE(大小 :)
+REC_FRAME(帧频 :)
+REC_QUALITY(画质 :)
+REC_BITRATE(比特率 :)
+REC_SPEED(编码速度 :)
+REC_INFO(信息 :)
+REC_DIR(保存路径)
+REC_BROWSE(浏览)
+REC_SNAPSHOT(快照设定)
+REC_NSNAPSHOT(快照的张数 :)
+
+///// ETC preoperty page. /////
+ETC_TITLE(处理组件对话框)
+ETC_TSURFING(频道预览)
+ETC_SURFINGTIME(预览时间 :)
+ETC_SEC(秒数)
+ETC_NSURFINGWINDOW(预览的频道数 :)
+ETC_TTIMESHIFT(边看边录)
+ETC_SAVE(边看边录完之后不贮存档案)
+ETC_TDEINTERLACE(去除交错信号过滤器)
+ETC_DEINTERLACE(录像时,不使用去除交错信号过滤器)
+ETC_DISKINFO(硬盘信息)
+ETC_SCANMODE(自动搜索模式) 				// added
+ETC_DEFAULTSCANMODE(使用默认的自动-搜索方式)	 	// added
+
+///// Schedule Dlg /////
+SCHDULE_TITLE(预约录像设定)
+SCHDULE_ADD(设定)
+SCHDULE_EDIT(退出)
+SCHDULE_DELETE(删除)
+SCHDULE_DELALL(全部删除)
+SCHDULE_OK(OK)
+SCHDULE_CANCEL(取消)
+
+///// Time Dlg /////
+ITEM_TILTE(设定预录项目)
+ITEM_SOURCE(输入来源)
+ITEM_TV(TV)
+ITEM_CATV(CATV)
+ITEM_COMPOSITE(Composite)
+ITEM_SVIDEO(S-Video)
+ITEM_CHANNEL(频道)
+ITEM_CTV(TV :)
+ITEM_CCATV(CATV :)
+ITEM_EVERY(每天)
+ITEM_WEEK(周)
+ITEM_DAY(天)
+ITEM_ONCE(一次)
+ITEM_MODE(模式)
+ITEM_VIEW(观看)
+ITEM_REC(录像)
+ITEM_STARTTIME(开始时间)
+ITEM_TYEAR(年)
+ITEM_TMONTH(月)
+ITEM_TDAY(日)
+ITEM_TWEEK(周)
+ITEM_HOUR(时)
+ITEM_MINUTE(分)
+ITEM_HOWLONG(多长时间)
+ITEM_SEC(秒)
+ITEM_AFTERSCHEDULE(预约录像后)
+ITEM_DELETE(已设定的预约录像将被删除)
+ITEM_PROCESSING(正在进行处理 :)
+ITEM_ADD(设定)
+ITEM_CANCEL(取消)
+
+///// CahnnelScan Dlg /////
+SCAN_TITLE(自动搜索)
+SCAN_MSG(要新增频道吗)
+SCAN_TOALL(全部)
+SCAN_YES(是)
+SCAN_NO(否)
+SCAN_CANCEL(取消)
+/// honestechTVDlg.cpp ///	// updated 20070801
+MAIN_TITEL (honestech TVR 3.0) 		
+    
+MAIN_MESSAGE001 (功能设定)
+MAIN_MESSAGE002 (期限版的录制时间为10钟.请使用正式版)
+MAIN_MESSAGE003 (边看边录失败)
+MAIN_MESSAGE004 (文件播放失败)     
+MAIN_MESSAGE005 (升级版可边看边录超过10分钟)   
+MAIN_MESSAGE006 (确认要删除此文件吗)
+MAIN_MESSAGE007 (InitDriverFast 失败)
+MAIN_MESSAGE008 (请安装Windows Media Player)  
+MAIN_MESSAGE009 (不能编辑这个AVI 或 BMP 文件)    
+MAIN_MESSAGE010 (此版本不支持对MPEG-2格式的编辑功能)
+MAIN_MESSAGE012 (硬盘空间巳满)
+MAIN_MESSAGE013 (这个文件不存在)
+MAIN_MESSAGE014 (此文件不能在FM模式下运行, 请选择其他模式.)	
+MAIN_MESSAGE015 (请选择FM模式, 播放此文件.)				
+MAIN_MESSAGE016 (这个版本不支持,此文件格式..)			
+MAIN_MESSAGE017 (不能播放文件, 请先停止当前的文件.)				
+MAIN_MESSAGE018 (时间平移-Time-shifting 不能在FM模式下运行.)	
+MAIN_MESSAGE019 (可用空间不足,请确认您的磁盘空间.)	 
+MAIN_MESSAGE020 (为了应用更改的设置,请重新启动TVR.)	
+MAIN_MESSAGE021 (请先进行自动搜索功能.)	
+
+ 
+MAIN_TOOLTIP001 (http://www.honestech.com)
+MAIN_TOOLTIP002 (录像)
+MAIN_TOOLTIP003 (录像停止)
+MAIN_TOOLTIP004 (边看边录)
+MAIN_TOOLTIP005 (暂停)
+MAIN_TOOLTIP006 (停止)
+MAIN_TOOLTIP007 (开始)
+MAIN_TOOLTIP008 (结束)
+MAIN_TOOLTIP009 (最小化)
+MAIN_TOOLTIP010 (退出)
+MAIN_TOOLTIP011 (帮助)
+MAIN_TOOLTIP012 (频道向上)
+MAIN_TOOLTIP013 (频道向下)
+MAIN_TOOLTIP014 (预约录像)
+MAIN_TOOLTIP015 (功能设定)
+MAIN_TOOLTIP016 (自动搜索)
+MAIN_TOOLTIP017 (改变控制面板颜色)
+MAIN_TOOLTIP018 (音量大)
+MAIN_TOOLTIP019 (音量小)
+MAIN_TOOLTIP020 (静音)
+MAIN_TOOLTIP021 (播放)
+MAIN_TOOLTIP022 (编辑)
+MAIN_TOOLTIP023 (寄送出去)
+MAIN_TOOLTIP024 (显示列表)
+MAIN_TOOLTIP025 (影像目录)
+MAIN_TOOLTIP026 (新增目前的频道到频道清单)
+MAIN_TOOLTIP027 (删除目前在频道清单中的频道)
+MAIN_TOOLTIP028 (回放)
+MAIN_TOOLTIP029 (捕捉画面)
+MAIN_TOOLTIP030 (自动预览频道)
+MAIN_TOOLTIP031 (声道控制)
+MAIN_TOOLTIP032 (iEPG)
+MAIN_TOOLTIP033 (Teletext)		
+MAIN_TOOLTIP034 (频道列表)	
+   
+MAIN_LIST001  (文件)
+MAIN_LIST002  (大小)
+MAIN_LIST003  (时间)     
+MAIN_LIST004  (全名)
+
+DRIVER_LIST001 (硬盘)
+DRIVER_LIST002 (全部容量)
+DRIVER_LIST003 (可用容量)
+DRIVER_LIST004 (硬盘文件系统)
+
+SCREEN_TITEL      (TVR 屏幕)
+SCREEN_MESSAGE001 (录像失败)
+SCREEN_MESSAGE002 (初始化采集装置失败)
+SCREEN_MESSAGE003 (初始化 Overlay 失败)
+SCREEN_MESSAGE004 (在目前的路径中找不到 Player.exe)
+SCREEN_MESSAGE005 (要新增频道吗)
+SCREEN_MESSAGE006 (录制AVI格式的影像文件失败)   
+SCREEN_MESSAGE007 (目前所使用的采集装置不支持你所指定的录像格式)
+SCREEN_MESSAGE008 (搜索频道结束)
+SCREEN_MESSAGE009 (频道列表中已注册的信息将被删除,是否继续 ?) // 200509 added
+
+SCREEN_TOOLTIP001 (最小化)    
+SCREEN_TOOLTIP002 (全屏幕)
+SCREEN_TOOLTIP003 (退出)   		// added
+///////////////////////////
+
+
+/// setting.cpp ///
+OPTION_MESSAGE001  (对不起.升级版才可边看边录超过10分钟.)
+///////////////////
+
+
+/// MediaDlg.cpp ///
+EDIT_TOOLTIP001  (退出)
+EDIT_TOOLTIP002  (左边删除)
+EDIT_TOOLTIP003  (右边删除)
+EDIT_TOOLTIP004  (上一个)
+EDIT_TOOLTIP005  (下一个)
+EDIT_TOOLTIP006  (清除)
+EDIT_TOOLTIP007  (播放)
+EDIT_TOOLTIP008  (暂停)
+EDIT_TOOLTIP009  (停止)
+EDIT_TOOLTIP010  (编辑)
+
+EDIT_MESSAGE001  (打开文件失败)
+EDIT_MESSAGE002  (编辑失败)
+EDIT_MESSAGE003  (请选择起始及结束点)
+EDIT_MESSAGE004  (升级版才能编辑超过十分钟的影像)
+///////////////////////
+
+
+/// ScheduleDlg.cpp TimeDlg.cpp ///
+SCHEDULE_LIST001	(天)
+SCHEDULE_LIST002	(开始)
+SCHEDULE_LIST003	(持续)
+SCHEDULE_LIST004	(来源)
+SCHEDULE_LIST005	(频道)
+SCHEDULE_LIST006	(每天)
+SCHEDULE_LIST007	(模式)
+SCHEDULE_LIST008	(预约录像后)
+
+SCHEDULE_SOURCE001   (TV)
+SCHEDULE_SOURCE002   (Cable)
+SCHEDULE_SOURCE003   (Composite)
+SCHEDULE_SOURCE004   (S-Video)
+
+SCHEDULE_WEEK001   (星期日)
+SCHEDULE_WEEK002   (星期一)
+SCHEDULE_WEEK003   (星期二)
+SCHEDULE_WEEK004   (星期三)
+SCHEDULE_WEEK005   (星期四)
+SCHEDULE_WEEK006   (星期五)
+SCHEDULE_WEEK007   (星期六)
+SCHEDULE_WEEK008   (天)
+SCHEDULE_WEEK009   (一次)
+
+SCHEDULE_VIEW001   (录像)
+SCHEDULE_VIEW002   (观看)
+
+SCHEDULE_MESSAGE001   (在同一个时间段已有节目被选择)
+SCHEDULE_MESSAGE002   (没有节目信息,请输入节目信息)
+///////////////////////
+
+SCHEDULE_AfterRec001(待命中)
+SCHEDULE_AfterRec002(关闭TVR)
+SCHEDULE_AfterRec003(进入待机模式)
+SCHEDULE_AfterRec004(关闭PC)
+SCHEDULE_AddNotice001(请注意! 当您的PC关闭后, 预约录像将无法工作)
+SCHEDULE_AddNotice002(十分钟内将进行预约录像, 取消待机模式 正在设定预约录像后的工作程序)
+
+MAIN_MSGCODEC1(selected video codec could not used in this application)
+MAIN_MSGCODEC2(selected Audio codec could not used in this application)
+
+
+
+
+
+//////////////////////// Menu resource ///
+MENU_PLAY(播放)
+MENU_EDIT(编辑)
+MENU_MAIL(发送邮件)
+MENU_RENAME(重名)						// 20051213 Add
+MENU_DELETE(删除)
+MENU_SAVEAS(保存为)
+
+MENU_SCREEN(显示模式)
+MENU_FREESCALE(自由比例)	
+MENU_DEINTERLACE(隔行交错)	
+MENU_FULL(全屏幕)
+MENU_NORMAL(正常比例)
+MENU_MINIMIZE(最小化)
+MENU_ASPECTRATIO(画面比例)
+MENU_ALWAYSTOP(控制面板显示在顶层)
+MENU_CHANNELUP(频道向上) 		//  added
+MENU_CHANNELDOWN(频道向下) 		//  added
+MENU_AUTOSCAN(搜索频道) 		//  added
+MENU_CHANNELSURFING(自动预览频道) 	//  added
+MENU_PROPERTYSETTING(功能设定)	 	//  added
+MENU_SCHEDULEREC(预录设定) 		//  added
+MENU_MUTE(静音) 			//  added
+MENU_SHOWPANEL(控制面板)	 	//  added
+MENU_CLOSEMENU(关闭菜单) 		//  added
+MENU_SHUTDOWN(退出) 			// added use text from TRAY_EXIT 
+
+TRAY_SCHEDULE(预录观看)
+TRAY_LAUNCH(启动 - TVR)
+TRAY_EXIT(退出)
+
+///// Change Name Page ///////
+CN_CHANGENAME_TITLE(重名对话框)					// 20051213 Add
+CN_ORIGINAL_NAME   (源文件名 :)					// 20051213 Add
+CN_TARGET_NAME     (更名为 :)					// 20051213 Add
+
+///// TV preoperty page. /////
+TV_TITLE(TV 设定)
+TV_CATEGORY(类型)
+TV_TV(TV)
+TV_CATV(CATV)
+TV_COUNTRY(国家)
+TV_AUTODETECT(自动识别国家 :)
+TV_SELECT(手动选择国家 :)
+TV_CODE(国家代码 :)
+TV_ADELETE(增加/删除 频道)
+TV_MIN(最小化 :)
+TV_MAX(最大化 :)
+TV_ENTER(确认)
+TV_ADD(增加 ->)
+TV_DEL(<- 删除)
+TV_SCAN(自动搜索)
+
+TV_CHANGENAME(改变名称)
+TV_FINETUNE(微调)
+TV_RESET(重置)
+TV_SMODE(搜索方式)
+TV_CHANNEL(频道号)
+TV_CHNAMES(频道名称)
+TV_CHTVSYSTEM(视频标准)
+TV_SCANMODE1(频道搜索)
+TV_SCANMODE2(频率搜索)
+
+TV_SORTMODE(排列方式 :)
+TV_SORTMODE1(依频道顺序 - 递增排列)
+TV_SORTMODE2(依频道顺序 - 递减排列)
+TV_SORTMODE3(依频道名称 - 递增排列)
+TV_SORTMODE4(依频道名称 - 递减排列)
+
+TV_TABLEMODE1(按频道号选台)
+TV_TABLEMODE2(按频道顺序选台)
+
+TV_OPMODE(选择指定频道模式 :)
+TV_FAVORITECHANNEL(只显示已被选择的频道)
+TV_CHANGEORDER(改变频道顺序 :)
+TV_CHANGEUP(上移)
+TV_CHANGEDOWN(下移)
+TV_CHANGEMOVETO(移动)
+TV_CHORDER(频道顺序)
+
+TV_MESSAGE001 (请在复选框中选择喜爱的频道!) 	// 200509 added
+TV_MESSAGE002 (请选择范围.) 			// 200509 added
+
+///// VIDEO preoperty page. /////
+VIDEO_TITLE(视频设定)
+VIDEO_FINE(微调)
+VIDEO_DEFAULT(默认值)
+VIDEO_BR(亮度)
+VIDEO_CON(对比)
+VIDEO_HUE(色度)
+VIDEO_SAT(饱和度)
+VIDEO_VIDEOSTANDARD(影音标准)
+VIDEO_VCAP(采集装置)
+VIDEO_VSOURCE(视频来源)
+VIDEO_ACAP(混音装置)
+VIDEO_ASOURCE(音频输入)
+VIDEO_APLAYSOURCE(播放装置 :)			// 200509 added
+VIDEO_ARECSOURCE(录音装置 :)			// 200509 added
+VIDEO_PLAY(播放 :)
+VIDEO_REC(录像 :)
+VIDEO_INTERNALAUDIO(使用内置音源)		// 200509 added
+VIDEO_SET_DEFAULT (默认设置)									// 20081203 added
+VIDEO_SET_DEFAULT_RECORD_DEVICE ( !! 必须把所选得录音装置设置为系统的默认装置.)		// 20081203 added
+VIDEO_INVALID_MIXER (系统中没有可利用的混音装置.)						// 20081203 added
+
+
+
+///// REC preoperty page. /////
+REC_TITLE(录像设定)
+REC_RECTYPE(录像型式)
+REC_AV(影像+声音)
+REC_ONLYVIDEO(只有影像)
+REC_PROFILE(录像模板)
+REC_SIZE(大小 :)
+REC_FRAME(帧频 :)
+REC_QUALITY(画质 :)
+REC_BITRATE(比特率 :)
+REC_SPEED(编码速度 :)
+REC_INFO(信息 :)
+REC_DIR(保存路径)
+REC_BROWSE(浏览)
+REC_SNAPSHOT(快照设定)
+REC_NSNAPSHOT(快照的张数 :)
+
+///// ETC preoperty page. /////
+ETC_TITLE(处理组件对话框)
+ETC_TSURFING(频道预览)
+ETC_SURFINGTIME(预览时间 :)
+ETC_SEC(秒数)
+ETC_NSURFINGWINDOW(预览的频道数 :)
+ETC_TTIMESHIFT(边看边录)
+ETC_SAVE(边看边录完之后不贮存档案)
+ETC_TDEINTERLACE(去除交错信号过滤器)
+ETC_DEINTERLACE(录像时,不使用去除交错信号过滤器)
+ETC_DISKINFO(硬盘信息)
+ETC_SCANMODE(自动搜索模式) 				// added
+ETC_DEFAULTSCANMODE(使用默认的自动-搜索方式)	 	// added
+
+///// Schedule Dlg /////
+ SCHDULE_TITLE(预约录像设定)
+ SCHDULE_ADD(设定)
+ SCHDULE_EDIT(退出)
+ SCHDULE_DELETE(删除)
+ SCHDULE_DELALL(全部删除)
+ SCHDULE_OK(OK)
+ SCHDULE_CANCEL(取消)
+
+///// Time Dlg /////
+ITEM_TILTE(设定预录项目)
+ITEM_DVBTSOURCE(当您使用DVB-T时, 无须选择信号来源.)
+ITEM_SOURCE(输入来源)
+ITEM_TV(TV)
+ITEM_CATV(CATV)
+ITEM_COMPOSITE(Composite)
+ITEM_SVIDEO(S-Video)
+ITEM_CHANNEL(频道)
+ITEM_CTV(TV :)
+ITEM_CCATV(CATV :)
+ITEM_EVERY(每天)
+ITEM_WEEK(周)
+ITEM_DAY(天)
+ITEM_ONCE(一次)
+ITEM_MODE(模式)
+ITEM_VIEW(观看)
+ITEM_REC(录像)
+ITEM_STARTTIME(开始时间)
+ITEM_TYEAR(年)
+ITEM_TMONTH(月)
+ITEM_TDAY(日)
+ITEM_TWEEK(周)
+ITEM_HOUR(时)
+ITEM_MINUTE(分)
+ITEM_HOWLONG(多长时间)
+ITEM_SEC(秒)
+ITEM_AFTERSCHEDULE(预约录像后)
+ITEM_DELETE(已设定的预约录像将被删除)
+ITEM_PROCESSING(正在进行处理 :)
+ITEM_ADD(设定)
+ITEM_CANCEL(取消)
+
+///// CahnnelScan Dlg /////
+SCAN_TITLE(自动搜索)
+SCAN_MSG(要新增频道吗)
+SCAN_TOALL(全部)
+SCAN_YES(是)
+SCAN_NO(否)
+SCAN_CANCEL(取消)
+
+///// CahnnelSurfing Dlg /////
+SURFING_EXIT(退出)
+SURFING_SET(设定)
+SURFING_STOP(停止频道预览)
+SURFING_CONTINUE(继续频道预览)
+SURFING_LEFTMOVE(<<--)  // Move to left window
+SURFING_RIGHTMOVE(-->>) // Move to right window
+
+///// Tree Dlg /////
+TREE_DLG_TITLE(变更活页夹)
+TREE_DLG_CANCEL(取消)
+
+///// Message Dlg /////
+MSG_DLG_TITLE()
+MSG_DLG_UPGRADE(升级)
+
+///// Wait Dlg /////
+WAIT_DLG_TITLE(请稍等...)
+
+///// Channel Name Changing Dlg /////
+CHNAME_TITLE(改变名称)
+CHNAME_NUMBER(频道 :)
+CHNAME_NAME(频道名称 :)
+CHNAME_OK(OK)
+CHNAME_CANCEL(取消)
+
+
+///// CahnnelSurfing Dlg /////
+SURFING_EXIT(退出)
+SURFING_SET(设定)
+SURFING_STOP(停止频道预览)
+SURFING_CONTINUE(继续频道预览)
+SURFING_LEFTMOVE(<<--)  // Move to left window
+SURFING_RIGHTMOVE(-->>) // Move to right window
+
+///// Tree Dlg /////
+TREE_DLG_TITLE(变更活页夹)
+TREE_DLG_CANCEL(取消)
+
+///// Message Dlg /////
+MSG_DLG_TITLE()
+MSG_DLG_UPGRADE(升级)
+
+///// Wait Dlg /////
+WAIT_DLG_TITLE(请稍等...)
+
+///// Channel Name Changing Dlg /////
+CHNAME_TITLE(改变名称)
+CHNAME_NUMBER(频道 :)
+CHNAME_NAME(频道名称 :)
+CHNAME_OK(OK)
+CHNAME_CANCEL(取消)
+
+///// DTV setting Dlg /////
+DTV_TITLE(DTV 设置)
+DTV_NOCHANNEL(频道列表为空, 是否开始进行自动搜索 ?)	
+DTV_RIGHTRANGR(请选择正确的范围.)
+DTV_CHANNELSCAN(频道搜索)
+DTV_SCANTYPE(国家)
+DTV_SCANBUTTON(搜索)
+DTV_FREQRANGE(频率范围[KHz])
+DTV_BANDWIDTH(宽带)
+DTV_CHLIST(频道)
+DTV_LIST_CHNUM(频道号.)
+DTV_LIST_CHNAME(频道名)
+DTV_LIST_CHFREQUENCY(频率)
+DTV_LIST_VPID(VPid)
+DTV_LIST_APID(APid)
+
+///// Scanning now Dlg /////
+SCANNING_TITLE(现在搜索...)
+SCANNING_CURFREQUENCY(当前频率)
+SCANNING_SCANNEDCHS(创建频道)
+SCANNING_STARTBUTTON(开始搜索)
+SCANNING_STOPBUTTON(停止搜索)
+SCANNING_EXITBUTTON(退出)
+
+///// DTV recording Dlg /////		
+DTVREC_TITLE(DTV 录制)
+DTVREC_VIDEOTITLE(视频录制格式.)
+DTVREC_VIDEOFORMAT(录制格.)
+DTVREC_VIDEOINFO(信息)
+DTVREC_AUDIOTITLE(自动录制格式)
+DTVREC_WORKDIR(保存路径)
+DTVREC_BROWSE(浏览)
+DTVREC_FREESPACE(可用空间)
+
+///// DTV EPG Dlg /////	
+DTVEPG_CAHNNELNUMBER (频道)	// 20071123
+DTVEPG_PROGRAMTABLE (节目列表)	// 20071123
+DTVEPG_DATE (日期)		// 20071123
+DTVEPG_EVENT (说明)		// 20071123
+DTVEPG_DESCRIPTION (信息)	// 20071123
+DTVEPG_REFRESH (刷新)		// 20071123
+DTVEPG_SAVETORECORD (录制设置)	// 20071123
+
+/// Setup wizard ///
+WSETUP_MESSAGE001 (请先确认采集装置与声卡装置.)
+
+/// Wizard Device Setting Dlg ///
+WDEVICE_TITLE (安装向导 –设置采集装置)
+WDEVICE_DTVTYPE (数字电视类型:)
+WDEVICE_MESSAGE001 (没有声卡装置)
+
+/// Wizard TV Setting Dlg ///
+WTV_STITLE (搜索模拟信号)
+WTV_FORMAT (格式)
+
+/// Wizard DTV Setting Dlg ///
+WDTV_STITLE (搜索DVB-T 信号台)
+WDTV_ASCAN (高级选项)                 
+
+/// Wizard ATSC Setting Dlg ///
+WATSC_STITLE (搜索ATSC 信号台)
+WATSC_AIR (天线)
+WATSC_CABLE (有线)
+WATSC_CRANGE (设置范围)
+
+/// Wizard Scanning now Dlg ///
+WSCANNING_CURCHANNEL (当前频道:)  
+
+
+
+
+
